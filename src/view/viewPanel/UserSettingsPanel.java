@@ -119,7 +119,7 @@ public class UserSettingsPanel extends RoundedShadowPanel implements UserObserve
 		
 		btnSaveOP = new ButtonShadow();
 		btnSaveOP.setFocusPainted( false );
-		btnSaveOP.setText( "Spremi promjene" );
+		btnSaveOP.setText( "Guardar cambios" );
 		btnSaveOP.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		btnSaveOP.setBounds( 560 , 383 , 200 , 45 );
 		
@@ -131,13 +131,13 @@ public class UserSettingsPanel extends RoundedShadowPanel implements UserObserve
 		panelSigurnost.setBackground( new Color( 244 , 244 , 249 ) );
 		
 		txtConfirmPassword = new TextField();
-		txtConfirmPassword.setLabelText( "Ponovi novu lozinku" );
+		txtConfirmPassword.setLabelText( "Repetir contraseña" );
 		txtConfirmPassword.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		txtConfirmPassword.setBackground( new Color( 244 , 244 , 249 ) );
 		txtConfirmPassword.setBounds( 460 , 137 , 300 , 65 );
 		
 		txtPassword = new TextField();
-		txtPassword.setLabelText( "Nova lozinka" );
+		txtPassword.setLabelText( "Nueva contraseña" );
 		txtPassword.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		txtPassword.setBackground( new Color( 244 , 244 , 249 ) );
 		txtPassword.setBounds( 460 , 61 , 300 , 65 );
@@ -252,8 +252,8 @@ public class UserSettingsPanel extends RoundedShadowPanel implements UserObserve
 								clearAll();
 								
 								notification.setType( NotificationType.SUCCESS );
-								notification.setLblTitle( "Lozinka promijenjena" );
-								notification.setLbMessageText( "Uspije\u0161no ste promijenili svoju lozinku..." );
+								notification.setLblTitle( "Contraseña cambiada" );
+								notification.setLbMessageText( "Contraseña cambiada exitosamente" );
 								notification.showNotification();
 								
 								GlassPanePopup.closePopupLast();

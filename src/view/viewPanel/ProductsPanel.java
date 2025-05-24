@@ -113,7 +113,7 @@ public class ProductsPanel extends RoundedShadowPanel {
 		
 		txtCijenaArtikla = new TextField();
 		txtCijenaArtikla.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtCijenaArtikla.setLabelText( "Cijena usluge" );
+		txtCijenaArtikla.setLabelText( "Precio" );
 		txtCijenaArtikla.setHintTextColor( new Color( 121 , 118 , 118 ) );
 		txtCijenaArtikla.setForeground( new Color( 44 , 51 , 51 ) );
 		txtCijenaArtikla.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
@@ -150,7 +150,7 @@ public class ProductsPanel extends RoundedShadowPanel {
 		txtSearch.setMaximumSize( new Dimension( 350 , 65 ) );
 		txtSearch.setPreferredSize( new Dimension( 350 , 65 ) );
 		txtSearch.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtSearch.setLabelText( "Pretra\u017ei.." );
+		txtSearch.setLabelText( "Buscar" );
 		txtSearch.setHintTextColor( new Color( 121 , 118 , 118 ) );
 		txtSearch.setForeground( new Color( 44 , 51 , 51 ) );
 		txtSearch.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
@@ -167,7 +167,7 @@ public class ProductsPanel extends RoundedShadowPanel {
 		btnDelete.setIconTextGap( 2 );
 		btnDelete.setIcon( null );
 		btnDelete.setPreferredSize( new Dimension( 150 , 45 ) );
-		btnDelete.setText( "Izbri\u0161i" );
+		btnDelete.setText( "Eliminar" );
 		btnDelete.setForegroundColorOUT( new Color( 146 , 20 , 12 ) );
 		btnDelete.setForegroundColorIN( new Color( 146 , 20 , 12 ) );
 		btnDelete.setForeground( new Color( 146 , 20 , 12 ) );
@@ -199,7 +199,7 @@ public class ProductsPanel extends RoundedShadowPanel {
 		table.setShowGrid( false );
 		
 		table.setModel( new DefaultTableModel( new Object[][] {} ,
-				new String[] { "ID" , "\u0160ifra" , "Naziv" , "Cijena" , } ) );
+				new String[] { "ID" , "Código" , "Nombre" , "Precio" , } ) );
 		
 		table.getTableHeader().setPreferredSize( new Dimension( 785 , 40 ) );
 		table.getTableHeader().setFont( new Font( "Century Gothic" , Font.BOLD , 15 ) );
@@ -272,7 +272,7 @@ public class ProductsPanel extends RoundedShadowPanel {
 					btnDodaj.setEnabled( true );
 					btnUpdate.setEnabled( false );
 					btnDelete.setEnabled( false );
-					lblFormTitle.setText( "Dodaj novu uslugu" );
+					lblFormTitle.setText( "Agregar nuevo servicio" );
 					
 				} else {
 					
@@ -296,8 +296,8 @@ public class ProductsPanel extends RoundedShadowPanel {
 				if ( !btnDodaj.isEnabled() ) {
 					
 					notification.setType( NotificationType.WARNING );
-					notification.setLblTitle( "Upozorenje" );
-					notification.setLbMessageText( "Odzna\u010dite odabranog uslugu ..." );
+					notification.setLblTitle( "Advertencia" );
+					notification.setLbMessageText( "Deseleccione el servicio seleccionado..." );
 					notification.showNotification();
 					
 				}
@@ -311,17 +311,17 @@ public class ProductsPanel extends RoundedShadowPanel {
 			@Override
 			public void actionPerformed( ActionEvent e ) {
 				
-				System.out.println( "CIJENA: " + txtCijenaArtikla.getText() );
+				System.out.println( "Precio: " + txtCijenaArtikla.getText() );
 				
 				BigDecimal cijena = BigDecimal
 						.valueOf( Double.parseDouble( txtCijenaArtikla.getText().replace( "," , "." ) ) );
-				System.out.println( "Cijena nakon formata: " + cijena );
+				System.out.println( "Precio del formado: " + cijena );
 				Product addedProduct = new Product( txtNazivArtikla.getText() , cijena );
 				uslugeController.addProduct( addedProduct );
 				
 				notification.setType( NotificationType.SUCCESS );
-				notification.setLblTitle( "Dodana nova usluga" );
-				notification.setLbMessageText( "Dodali ste " + addedProduct.getName() + " u bazu..." );
+				notification.setLblTitle( "nuevo servicio añadido" );
+				notification.setLbMessageText( "Has agregado " + addedProduct.getName() + " u bazu..." );
 				notification.showNotification();
 				
 			}
@@ -336,7 +336,7 @@ public class ProductsPanel extends RoundedShadowPanel {
 				if ( !btnUpdate.isEnabled() ) {
 					
 					notification.setType( NotificationType.WARNING );
-					notification.setLblTitle( "Upozorenje" );
+					notification.setLblTitle( "Advertencia" );
 					notification.setLbMessageText( "Odzna\u010dite uslugu ..." );
 					notification.showNotification();
 					
@@ -357,11 +357,11 @@ public class ProductsPanel extends RoundedShadowPanel {
 						"A\u017eurirali ste " + table.getValueAt( table.getSelectedRow() , 2 ) + " ..." );
 				
 				Message msg = new Message();
-				msg.setMessageTitle( "Jeste li sigurni da želite a\u017eurirati uslugu: "
+				msg.setMessageTitle( "¿Está seguro de que desea a\u017cancelar el servicio: "
 						+ table.getValueAt( table.getSelectedRow() , 2 ) );
-				msg.setMessageText( "Pritiskom gumba OK usluga će se a\u017eurirati: \n" + "Stara vrijednosti: "
+				msg.setMessageText( "Al presionar el botón OK, el servicio se actualizará: \n" + "Valor anterio: "
 						+ table.getValueAt( table.getSelectedRow() , 2 ) + " - €"
-						+ table.getValueAt( table.getSelectedRow() , 3 ) + "\n" + "Nove vrijednosti: "
+						+ table.getValueAt( table.getSelectedRow() , 3 ) + "\n" + "Nuevo valor: "
 						+ txtNazivArtikla.getText() + " - €" + txtCijenaArtikla.getText() );
 				msg.eventOK( new ActionListener() {
 					
@@ -391,7 +391,7 @@ public class ProductsPanel extends RoundedShadowPanel {
 				if ( !btnDelete.isEnabled() ) {
 					
 					notification.setType( NotificationType.WARNING );
-					notification.setLblTitle( "Upozorenje" );
+					notification.setLblTitle( "Advertencia" );
 					notification.setLbMessageText( "Odzna\u010dite uslugu ..." );
 					notification.showNotification();
 					
@@ -407,12 +407,11 @@ public class ProductsPanel extends RoundedShadowPanel {
 			public void actionPerformed( ActionEvent e ) {
 				
 				notification.setType( NotificationType.SUCCESS );
-				notification.setLblTitle( "Izbrisana usluga" );
-				notification.setLbMessageText(
-						"Izbrisali ste " + table.getValueAt( table.getSelectedRow() , 2 ) + " iz baze ..." );
+				notification.setLblTitle( "Servicio eliminado" );
+				notification.setLbMessageText( "Ha eliminado " + table.getValueAt( table.getSelectedRow() , 2 ) + " de la base de datos..." );
 				
 				Message msg = new Message();
-				msg.setMessageTitle( "Jeste li sigurni da \u017eelite izbrisati uslugu: "
+				msg.setMessageTitle( "¿Está seguro que desea eliminar el servicio: "
 						+ table.getValueAt( table.getSelectedRow() , 2 ) );
 				msg.setMessageText( "Pritiskom gumba OK usluga se bri\u0161e nepovratno." );
 				msg.eventOK( new ActionListener() {

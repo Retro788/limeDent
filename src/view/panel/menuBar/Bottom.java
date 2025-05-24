@@ -82,7 +82,7 @@ public class Bottom extends HalfRoundShadowPanel {
 		btnUserSettings.setRound( 20 );
 		btnUserSettings.setHorizontalTextPosition( SwingConstants.RIGHT );
 		btnUserSettings.setHorizontalAlignment( SwingConstants.LEFT );
-		btnUserSettings.setText( "Postavke" );
+		btnUserSettings.setText( "Ajustes" );
 		btnUserSettings.setIconTextGap( 30 );
 		btnUserSettings.setForeground( new Color( 244 , 244 , 249 ) );
 		btnUserSettings.setFont( new Font( "Century Gothic" , Font.BOLD , 15 ) );

@@ -13,7 +13,7 @@ public class MedicalExamTableModel extends AbstractTableModel {
 	
 	private static final long serialVersionUID = -8388688554313142598L;
 	private ArrayList<MedicalExam> examList;
-	private String[] columnNames = { "Datum" , "Doktor" , "Pregled" , "" };
+	private String[] columnNames = {"Fecha", "Doctor", "Examen" , "" };
 	boolean[] canEdit = new boolean[] { false , false , false , true };
 	
 	/**

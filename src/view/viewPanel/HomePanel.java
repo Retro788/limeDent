@@ -79,7 +79,7 @@ public class HomePanel extends RoundedShadowPanel {
 		this.homeController = new HomeController( this );
 //		homeController.startPatientCheckThread();
 		
-		setToolTipText( "Klikni za odzna\u010davanje pacijenta ..." );
+		setToolTipText( "Haga clic para deseleccionar al paciente..." );
 		setOpaque( false );
 		setFont( new Font( "Century Gothic" , Font.BOLD , 16 ) );
 		setBackground( new Color( 244 , 244 , 249 ) );
@@ -101,7 +101,7 @@ public class HomePanel extends RoundedShadowPanel {
 		txtSearch.setMinimumSize( new Dimension( 340 , 65 ) );
 		txtSearch.setMaximumSize( new Dimension( 340 , 65 ) );
 		txtSearch.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtSearch.setLabelText( "Pretra\u017ei" );
+		txtSearch.setLabelText( "Buscar" );
 		txtSearch.setHintTextColor( new Color( 121 , 118 , 118 ) );
 		txtSearch.setForeground( new Color( 44 , 51 , 51 ) );
 		txtSearch.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
@@ -112,7 +112,7 @@ public class HomePanel extends RoundedShadowPanel {
 		btnIzbrisi.setMaximumSize( new Dimension( 170 , 45 ) );
 		btnIzbrisi.setMinimumSize( new Dimension( 170 , 45 ) );
 		btnIzbrisi.setPreferredSize( new Dimension( 170 , 45 ) );
-		btnIzbrisi.setText( "Izbri\u0161i" );
+		btnIzbrisi.setText( "Eliminar" );
 		btnIzbrisi.setForegroundColorOUT( new Color( 146 , 20 , 12 ) );
 		btnIzbrisi.setForegroundColorIN( new Color( 146 , 20 , 12 ) );
 		btnIzbrisi.setForeground( new Color( 146 , 20 , 12 ) );
@@ -123,7 +123,7 @@ public class HomePanel extends RoundedShadowPanel {
 		btnDodaj.setMaximumSize( new Dimension( 200 , 45 ) );
 		btnDodaj.setMinimumSize( new Dimension( 200 , 45 ) );
 		btnDodaj.setPreferredSize( new Dimension( 200 , 45 ) );
-		btnDodaj.setText( "Dodaj novog pacijenta" );
+		btnDodaj.setText( "Agregar nuevo paciente" );
 		btnDodaj.setForeground( new Color( 121 , 118 , 118 ) );
 		btnDodaj.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		btnDodaj.setFocusPainted( false );
@@ -153,14 +153,14 @@ public class HomePanel extends RoundedShadowPanel {
 		table.getTableHeader().setFont( new Font( "Century Gothic" , Font.BOLD , 15 ) );
 		tableScrollPane.setViewportView( table );
 		table.setModel( new DefaultTableModel( new Object[][] {} ,
-				new String[] { "ID" , "Ime i prezime" , "OIB" , "Mobitel" , "Mail" , "Zadnji pregled" } ) );
+				new String[] { "ID" , "Nombre y apellido" , "DNI" , "Móvil" , "Email" , "Última consulta" } ) );
 		table.getColumnModel().getColumn( 0 ).setMaxWidth( 80 );
 		
 		insertTableData();
 		
 		btnDetalji = new ButtonShadow();
 		btnDetalji.setEnabled( false );
-		btnDetalji.setText( "Detalji" );
+		btnDetalji.setText( "Detalles" );
 		btnDetalji.setPreferredSize( new Dimension( 170 , 45 ) );
 		btnDetalji.setMinimumSize( new Dimension( 170 , 45 ) );
 		btnDetalji.setMaximumSize( new Dimension( 170 , 45 ) );
@@ -173,7 +173,7 @@ public class HomePanel extends RoundedShadowPanel {
 		btnPregled.setMaximumSize( new Dimension( 170 , 45 ) );
 		btnPregled.setMinimumSize( new Dimension( 170 , 45 ) );
 		btnPregled.setPreferredSize( new Dimension( 170 , 45 ) );
-		btnPregled.setText( "Novi pregled" );
+		btnPregled.setText( "Nueva consulta" );
 		btnPregled.setForeground( new Color( 121 , 118 , 118 ) );
 		btnPregled.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		btnPregled.setFocusPainted( false );
@@ -232,8 +232,8 @@ public class HomePanel extends RoundedShadowPanel {
 				if ( !btnPregled.isEnabled() ) {
 					
 					notification.setType( NotificationType.WARNING );
-					notification.setLblTitle( "Upozorenje" );
-					notification.setLbMessageText( "Odaberite pacijenta" );
+					notification.setLblTitle( "Advertencia" );
+					notification.setLbMessageText( "Seleccione un paciente" );
 					notification.showNotification();
 					
 				}
@@ -250,8 +250,8 @@ public class HomePanel extends RoundedShadowPanel {
 				if ( !btnDetalji.isEnabled() ) {
 					
 					notification.setType( NotificationType.WARNING );
-					notification.setLblTitle( "Upozorenje" );
-					notification.setLbMessageText( "Odaberite pacijenta" );
+					notification.setLblTitle( "Advertencia" );
+					notification.setLbMessageText( "Seleccione un paciente" );
 					notification.showNotification();
 					
 				}
@@ -282,8 +282,8 @@ public class HomePanel extends RoundedShadowPanel {
 				if ( !btnDodaj.isEnabled() ) {
 					
 					notification.setType( NotificationType.WARNING );
-					notification.setLblTitle( "Upozorenje" );
-					notification.setLbMessageText( "Odzna\u010dite odabranog pacijenta" );
+					notification.setLblTitle( "Advertencia" );
+					notification.setLbMessageText( "Deseleccione el paciente seleccionado" );
 					notification.showNotification();
 					
 				}
@@ -311,8 +311,8 @@ public class HomePanel extends RoundedShadowPanel {
 				if ( !btnIzbrisi.isEnabled() ) {
 					
 					notification.setType( NotificationType.WARNING );
-					notification.setLblTitle( "Upozorenje" );
-					notification.setLbMessageText( "Odaberite pacijenta" );
+					notification.setLblTitle( "Advertencia" );
+					notification.setLbMessageText( "Seleccione un paciente" );
 					notification.showNotification();
 					
 				}
@@ -327,12 +327,12 @@ public class HomePanel extends RoundedShadowPanel {
 			public void actionPerformed( ActionEvent e ) {
 				
 				notification.setType( NotificationType.WARNING );
-				notification.setLblTitle( "Pacijent izbrisan" );
+				notification.setLblTitle( "Paciente eliminado" );
 				notification.setLbMessageText(
-						"Pacijent " + table.getValueAt( table.getSelectedRow() , 1 ) + " izbrisan ..." );
+						"Paciente " + table.getValueAt( table.getSelectedRow() , 1 ) + " eliminado..." );
 				
 				Message msg = new Message();
-				msg.setMessageTitle( "Jeste li sigurni da \u017eelite izbrisati pacijenta: "
+				msg.setMessageTitle( "¿Está seguro que desea eliminar al paciente: "
 						+ table.getValueAt( table.getSelectedRow() , 1 ) );
 				msg.setMessageText( "Pritiskom gumba OK pacijent se bri\u0161e nepovratno." );
 				msg.eventOK( new ActionListener() {

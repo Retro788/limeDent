@@ -14,7 +14,7 @@ public class OfferTblPreviewModel extends AbstractTableModel {
 	
 	private static final long serialVersionUID = 9069481942874598372L;
 	private ArrayList<OfferTblPreviewData> tblPreviewData;
-	private String[] columnNames = { "Naziv" , "Cijena" , "Koli\u010Dina" , "Ukupno" , "Popust" , "Ukupno s popustom" };
+	private String[] columnNames = { "Nombre" , "Precio" , "Koli\u010Dina" ,"Total", "Descuento", "Total con descuento" };
 	boolean[] canEdit = new boolean[] { false , false , true , false , true , false };
 	private ArrayList<OfferTblPreviewObserver> observers = new ArrayList<>();
 	

@@ -122,11 +122,11 @@ public class NewOfferPanel extends RoundedShadowPanel {
 		cbText.setBackground( getBackground() );
 		
 		txtCijena = new TextField();
-		txtCijena.setText( "Test Cijena" );
+		txtCijena.setText( "Prueba de precio" );
 		txtCijena.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtCijena.setLabelText( "Cijena" );
+		txtCijena.setLabelText( "Precio" );
 		txtCijena.setHintTextColor( new Color( 121 , 118 , 118 ) );
-		txtCijena.setHelperText( "Cijena odabranog artikla" );
+		txtCijena.setHelperText( "Precio del artículo seleccionado" );
 		txtCijena.setForeground( new Color( 44 , 51 , 51 ) );
 		txtCijena.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		txtCijena.setEnabled( false );

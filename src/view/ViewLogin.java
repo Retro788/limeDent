@@ -127,7 +127,7 @@ public class ViewLogin extends JFrame {
 		txtUsername.setText( "test" );
 		txtUsername.setForeground( new Color( 44 , 51 , 51 ) );
 		txtUsername.setHintTextColor( new Color( 121 , 118 , 118 ) );
-		txtUsername.setLabelText( "Korisni\u010Dko ime" );
+		txtUsername.setLabelText( "Usuario" );
 		txtUsername.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		txtUsername.setHorizontalAlignment( SwingConstants.LEFT );
 		txtUsername.setBounds( 100 , 220 , 300 , 70 );
@@ -138,7 +138,7 @@ public class ViewLogin extends JFrame {
 		txtPassword = new PasswordField();
 		txtPassword.setText( "" );
 		txtPassword.setForeground( new Color( 44 , 51 , 51 ) );
-		txtPassword.setLabelText( "Lozinka" );
+		txtPassword.setLabelText( "Contraseña" );
 		txtPassword.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		txtPassword.setBackground( new Color( 244 , 244 , 249 ) );
 		txtPassword.setHorizontalAlignment( SwingConstants.LEFT );
@@ -148,7 +148,7 @@ public class ViewLogin extends JFrame {
 		
 		btnLogin = new ButtonShadow();
 		btnLogin.setForeground( new Color( 44 , 51 , 51 ) );
-		btnLogin.setText( "Login" );
+		btnLogin.setText( "Iniciar sesión" );
 		btnLogin.setFocusPainted( false );
 		btnLogin.setForeground( new Color( 121 , 118 , 118 ) );
 		btnLogin.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
@@ -274,7 +274,7 @@ public class ViewLogin extends JFrame {
 			
 		} else {
 			
-			notification.setLbMessageText( "Ne postoji korisnik s tim korisni\u010Dkim imenom." );
+			notification.setLbMessageText( "No existe un usuario con ese nombre de usuario." );
 			notification.showNotification();
 			
 		}

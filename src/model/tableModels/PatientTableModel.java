@@ -12,7 +12,7 @@ public class PatientTableModel extends AbstractTableModel {
 	
 	private static final long serialVersionUID = 6428592596661339727L;
 	ArrayList<Patient> patientList;
-	private String[] columnNames = { "ID" , "Ime i prezime" , "OIB" , "Mobitel" , "Mail" , "Zadnji pregled" };
+	private String[] columnNames = { "ID", "Nombre y apellido", "OIB", "Teléfono móvil", "Correo", "Último chequeo" };
 	boolean[] canEdit = new boolean[] { false , false , false , false , false , false };
 	
 	/**

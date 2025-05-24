@@ -87,7 +87,7 @@ public class NewMedicalExamPanel extends RoundedShadowPanel {
 		
 		notification = new Notification( view , NotificationType.SUCCESS , Location.TOP_CENTER , "" , "" );
 		
-		lblFormTitle = new JLabel( "Dodaj novi pregled - " );
+		lblFormTitle = new JLabel( "Agregar nueva consulta - " );
 		lblFormTitle.setForeground( new Color( 121 , 118 , 118 ) );
 		lblFormTitle.setFont( new Font( "Century Gothic" , Font.BOLD , 18 ) );
 		
@@ -95,7 +95,7 @@ public class NewMedicalExamPanel extends RoundedShadowPanel {
 		txtNoviPregledScroll.setPreferredSize( new Dimension( 250 , 250 ) );
 		txtNoviPregledScroll.setMinimumSize( new Dimension( 250 , 250 ) );
 		txtNoviPregledScroll.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtNoviPregledScroll.setLabelText( "Novi pregled" );
+		txtNoviPregledScroll.setLabelText( "Nueva consulta" );
 		txtNoviPregledScroll.setForeground( new Color( 44 , 51 , 51 ) );
 		txtNoviPregledScroll.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		txtNoviPregledScroll.setBackground( new Color( 244 , 244 , 249 ) );
@@ -109,7 +109,7 @@ public class NewMedicalExamPanel extends RoundedShadowPanel {
 		btnNoviPregled.setPreferredSize( new Dimension( 170 , 45 ) );
 		btnNoviPregled.setMinimumSize( new Dimension( 170 , 45 ) );
 		btnNoviPregled.setMaximumSize( new Dimension( 170 , 45 ) );
-		btnNoviPregled.setText( "Dodaj novi pregled" );
+		btnNoviPregled.setText( "Agregar nueva consulta" );
 		btnNoviPregled.setForeground( new Color( 121 , 118 , 118 ) );
 		btnNoviPregled.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		btnNoviPregled.setFocusPainted( false );
@@ -117,7 +117,7 @@ public class NewMedicalExamPanel extends RoundedShadowPanel {
 		ScrollBarCustom sc = new ScrollBarCustom( 80 );
 		sc.setUnitIncrement( 5 );
 		
-		lblProsliPregledi = new JLabel( "Pro\u0161li pregledi" );
+		lblProsliPregledi = new JLabel( "Consultas anteriores" );
 		lblProsliPregledi.setForeground( new Color( 121 , 118 , 118 ) );
 		lblProsliPregledi.setFont( new Font( "Century Gothic" , Font.BOLD , 16 ) );
 		
@@ -145,7 +145,7 @@ public class NewMedicalExamPanel extends RoundedShadowPanel {
 		table.setModel(
 				new DefaultTableModel( new Object[][] { { "13-01-2023" , "Ivan Kojić" , "Pregled Test" , null } } ,
 						
-						new String[] { "Datum" , "Doktor" , "Pregled" , "" } ) {
+						new String[] { "Fecha" , "Doctor" , "Consulta" , "" } ) {
 				
 				} );
 		
@@ -200,15 +200,15 @@ public class NewMedicalExamPanel extends RoundedShadowPanel {
 				}
 				
 				notification.setType( NotificationType.WARNING );
-				notification.setLblTitle( "Pregled izbrisan" );
-				notification.setLbMessageText( "Pregled dana "
-						+ noviPregledController.getSelectedExam( row ).getDateFormatted() + " izbrisan ..." );
+				notification.setLblTitle( "Consulta eliminada" );
+				notification.setLbMessageText( "Consulta del día "
+						+ noviPregledController.getSelectedExam( row ).getDateFormatted() + " eliminada..." );
 				
 				Message msg = new Message();
-				msg.setMessageTitle( "Brisanje pregleda" );
-				msg.setMessageText( "Jeste li sigurni da \u017eelite izbrisati pregled napravljen dana:  \n"
+				msg.setMessageTitle( "Eliminar consulta" );
+				msg.setMessageText( "¿Está seguro que desea eliminar la consulta realizada el día:  \n"
 						+ noviPregledController.getSelectedExam( row ).getDateFormatted() + " ?"
-						+ "\nPregled napravio/la: " + noviPregledController.getSelectedExam( row ).getDoctorName() );
+						+ "\nConsulta realizada por: " + noviPregledController.getSelectedExam( row ).getDoctorName() );
 				
 				msg.eventOK( new ActionListener() {
 					
@@ -234,8 +234,8 @@ public class NewMedicalExamPanel extends RoundedShadowPanel {
 				MessageInfo msgInfo = new MessageInfo();
 				msgInfo.setMessageTitle( "Datum: " + noviPregledController.getSelectedExam( row ).getDateFormatted() );
 				msgInfo.setMessageText(
-						"Pregled napravio/la: " + noviPregledController.getSelectedExam( row ).getDoctorName()
-								+ "\nPregled:\n " + noviPregledController.getSelectedExam( row ).getInfo() );
+						"Consulta realizada por: " + noviPregledController.getSelectedExam( row ).getDoctorName()
+								+ "\nConsulta:\n " + noviPregledController.getSelectedExam( row ).getInfo() );
 				System.out.println( "View row : " + noviPregledController.getSelectedExam( row ).getId() );
 				GlassPanePopup.showPopup( msgInfo );
 				
@@ -325,7 +325,7 @@ public class NewMedicalExamPanel extends RoundedShadowPanel {
 	 */
 	public void setData( Patient patient ) {
 		
-		lblFormTitle.setText( "Dodaj novi pregled - " + patient.getName() );
+		lblFormTitle.setText( "Agregar nueva consulta - " + patient.getName() );
 		noviPregledController.setTableData();
 		
 	}

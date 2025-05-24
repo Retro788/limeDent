@@ -81,7 +81,7 @@ public class NewPatientPanel extends RoundedShadowPanel {
 		
 		notification = new Notification( view , NotificationType.SUCCESS , Location.TOP_CENTER , "" , "" );
 		
-		lblFormTitle = new JLabel( "Dodaj novog pacijenta" );
+		lblFormTitle = new JLabel( "Agregar nuevo paciente/estudiante" );
 		lblFormTitle.setForeground( new Color( 121 , 118 , 118 ) );
 		lblFormTitle.setFont( new Font( "Century Gothic" , Font.BOLD , 18 ) );
 		
@@ -90,7 +90,7 @@ public class NewPatientPanel extends RoundedShadowPanel {
 		txtimePrezime.setMinimumSize( new Dimension( 340 , 65 ) );
 		txtimePrezime.setMaximumSize( new Dimension( 340 , 65 ) );
 		txtimePrezime.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtimePrezime.setLabelText( "Ime i prezime" );
+		txtimePrezime.setLabelText( "Nombre y apellido" );
 		txtimePrezime.setHintTextColor( new Color( 121 , 118 , 118 ) );
 		txtimePrezime.setForeground( new Color( 44 , 51 , 51 ) );
 		txtimePrezime.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
@@ -101,7 +101,7 @@ public class NewPatientPanel extends RoundedShadowPanel {
 		txtOIB.setMinimumSize( new Dimension( 340 , 65 ) );
 		txtOIB.setMaximumSize( new Dimension( 340 , 65 ) );
 		txtOIB.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtOIB.setLabelText( "OIB" );
+		txtOIB.setLabelText( "DNI" );
 		txtOIB.setHintTextColor( new Color( 121 , 118 , 118 ) );
 		txtOIB.setForeground( new Color( 44 , 51 , 51 ) );
 		txtOIB.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
@@ -112,7 +112,7 @@ public class NewPatientPanel extends RoundedShadowPanel {
 		txtJMBG.setMinimumSize( new Dimension( 340 , 65 ) );
 		txtJMBG.setMaximumSize( new Dimension( 340 , 65 ) );
 		txtJMBG.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtJMBG.setLabelText( "JMBG" );
+		txtJMBG.setLabelText( "CURP" );
 		txtJMBG.setHintTextColor( new Color( 121 , 118 , 118 ) );
 		txtJMBG.setForeground( new Color( 44 , 51 , 51 ) );
 		txtJMBG.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
@@ -123,7 +123,7 @@ public class NewPatientPanel extends RoundedShadowPanel {
 		txtAdresa.setMinimumSize( new Dimension( 340 , 65 ) );
 		txtAdresa.setMaximumSize( new Dimension( 340 , 65 ) );
 		txtAdresa.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtAdresa.setLabelText( "Adresa" );
+		txtAdresa.setLabelText( "Dirección" );
 		txtAdresa.setHintTextColor( new Color( 121 , 118 , 118 ) );
 		txtAdresa.setForeground( new Color( 44 , 51 , 51 ) );
 		txtAdresa.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
@@ -134,7 +134,7 @@ public class NewPatientPanel extends RoundedShadowPanel {
 		txtGrad.setMinimumSize( new Dimension( 340 , 65 ) );
 		txtGrad.setMaximumSize( new Dimension( 340 , 65 ) );
 		txtGrad.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtGrad.setLabelText( "Grad" );
+		txtGrad.setLabelText( "Ciudad" );
 		txtGrad.setHintTextColor( new Color( 121 , 118 , 118 ) );
 		txtGrad.setForeground( new Color( 44 , 51 , 51 ) );
 		txtGrad.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
@@ -145,7 +145,7 @@ public class NewPatientPanel extends RoundedShadowPanel {
 		txtBrojMobitela.setMinimumSize( new Dimension( 340 , 65 ) );
 		txtBrojMobitela.setMaximumSize( new Dimension( 340 , 65 ) );
 		txtBrojMobitela.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtBrojMobitela.setLabelText( "Broj mobitela" );
+		txtBrojMobitela.setLabelText( "Número de móvil" );
 		txtBrojMobitela.setHintTextColor( new Color( 121 , 118 , 118 ) );
 		txtBrojMobitela.setForeground( new Color( 44 , 51 , 51 ) );
 		txtBrojMobitela.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
@@ -166,7 +166,7 @@ public class NewPatientPanel extends RoundedShadowPanel {
 		txtPovijestBolestiScroll.setPreferredSize( new Dimension( 250 , 250 ) );
 		txtPovijestBolestiScroll.setMinimumSize( new Dimension( 250 , 250 ) );
 		txtPovijestBolestiScroll.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtPovijestBolestiScroll.setLabelText( "Povijest bolesti" );
+		txtPovijestBolestiScroll.setLabelText( "Historial médico" );
 		txtPovijestBolestiScroll.setForeground( new Color( 44 , 51 , 51 ) );
 		txtPovijestBolestiScroll.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		txtPovijestBolestiScroll.setBackground( new Color( 244 , 244 , 249 ) );
@@ -180,7 +180,7 @@ public class NewPatientPanel extends RoundedShadowPanel {
 		txtAlergijeScroll.setPreferredSize( new Dimension( 250 , 250 ) );
 		txtAlergijeScroll.setMinimumSize( new Dimension( 250 , 250 ) );
 		txtAlergijeScroll.setLineColor( new Color( 46 , 191 , 165 ) );
-		txtAlergijeScroll.setLabelText( "Alergije" );
+		txtAlergijeScroll.setLabelText( "Alergias" );
 		txtAlergijeScroll.setForeground( new Color( 44 , 51 , 51 ) );
 		txtAlergijeScroll.setFont( new Font( "Century Gothic" , Font.PLAIN , 15 ) );
 		txtAlergijeScroll.setBackground( new Color( 244 , 244 , 249 ) );
@@ -191,7 +191,7 @@ public class NewPatientPanel extends RoundedShadowPanel {
 		txtAlergijeScroll.setViewportView( txtAlergije );
 		
 		btnDodaj = new ButtonShadow();
-		btnDodaj.setText( "Dodaj" );
+		btnDodaj.setText( "Guardar" );
 		btnDodaj.setPreferredSize( new Dimension( 170 , 45 ) );
 		btnDodaj.setMinimumSize( new Dimension( 170 , 45 ) );
 		btnDodaj.setMaximumSize( new Dimension( 170 , 45 ) );
@@ -266,14 +266,14 @@ public class NewPatientPanel extends RoundedShadowPanel {
 				if ( !isAllValid() ) {
 					
 					notification.setType( NotificationType.WARNING );
-					notification.setLblTitle( "Krivi unos" );
-					notification.setLbMessageText( "Unijeli ste neispravne podatke" );
+					notification.setLblTitle( "Advertencia" );
+					notification.setLbMessageText( "Ingrese datos válidos" );
 					notification.showNotification();
 					
 				} else {
 					
 					notification.setType( NotificationType.SUCCESS );
-					notification.setLblTitle( "Pacijent dodan" );
+					notification.setLblTitle( "Paciente guardado" );
 					notification.setLbMessageText( "Dodali ste novog pacijenta: " + txtimePrezime.getText() );
 					
 					Message msg = new Message();
